@@ -24,7 +24,8 @@ module PhraseApp
               data.send(*args, &block)
             else
               self.class.log "You tried to execute the missing method ##{args.first} on key #{@key} which is not supported. Please make sure you treat your translations as strings only."
-              original_translation = ::I18n.translate_without_phraseapp(*@original_args)
+              kw_args = @original_args.last.is_a?(Hash) ? @original_args.pop : {}
+              original_translation = ::I18n.translate_without_phraseapp(*@original_args, **kw_args)
               original_translation.send(*args, &block)
             end
           end

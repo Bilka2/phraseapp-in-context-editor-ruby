@@ -1,8 +1,49 @@
-<h2 class="text-center">This is a simple demo of the Ruby integration gem for the In-Context Editor</h2>
+<div style="float: left;width: 100%;"><h2 class="text-center">This is a simple demo of the Ruby integration gem for the In-Context Editor</h2>
 <b>Find me in app/views/main/index.html.erb</b>
 <p><%= t('hero_title') %></p>
-<p><%= t('advantages_text') %></p>
-<p><%= t('integrate_title') %></p>
-<p><%= t('create_this_key') %></p>
-<p><%= t('integrate_text') %></p>
+<p><%= t('hero_description') %></p>
 <p><%= t('variable_text', variable: "<b>BigText</b>") %></p>
+
+<div class="splash" style="margin: auto;max-width: 78em">
+  <div class="favorite module" style="clear: left; float: left; width: 48%">
+    <h3 class="heading"><%= t(".find_your_favorites") %></h3>
+    <ul>
+        <li>
+          <%= t('integrate_title') %>
+        </li>
+    </ul>
+  </div>
+
+  <div class="random news module" style="float: left; width: 48%">
+    <ul>
+      <li>
+        <%= t('integrate_title') %>
+      </li>
+    </ul>
+  </div>
+
+    <div class="random readings module" style="clear: left; float: left; width: 48%">
+      <h3 class="heading">
+        <span class="title"><%= t(".readings.heading.title") %></span>
+        <span class="link"><%= t(".readings.heading.history_link") %></span>
+      </h3>
+      <div class="flash"></div>
+      <p class="note"><%= t(".readings.note") %></p>
+      <ul class="readings works index group">
+        <li>
+          <%= t('integrate_title') %>
+        </li>
+      </ul>
+    </div>
+
+  <div class="social module" style="float: left; width: 48%">
+    <h3 class="heading"><%= t(".social.heading") %></h3>
+    <p class="note"><%= t(".social.note_html", other_outlets_link: link_to(t(".social.other_outlets"), "https://www.transformativeworks.org/where-find-us/")) %></p>
+
+    <ul>
+      <li class="twitter"><%= t('hero_title') %></li>
+      <li class="tumblr"><%= t('hero_title') %></li>
+    </ul>
+  </div>
+</div>
+</div>

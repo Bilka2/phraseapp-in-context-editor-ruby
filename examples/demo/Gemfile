@@ -71,4 +71,4 @@ group :test do
   gem "webdrivers"
 end
 
-gem "phraseapp-in-context-editor-ruby", path: "../.." # Note this is using local version of the gem
+gem "phraseapp-in-context-editor-ruby", git: 'https://github.com/phrase/phraseapp-in-context-editor-ruby'
